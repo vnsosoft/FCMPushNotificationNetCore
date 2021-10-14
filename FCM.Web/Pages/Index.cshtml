@@ -1,0 +1,68 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "FCM Web";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Open console to check keyPair and device token</p>
+    <div>
+        <div>
+            <div>
+                <input id="keyPair" style="width: 800px;" placeholder="Enter messages..."
+                 value="BDfMtXqlQp4iORTKnlIeCwXd78giHSysV2ZN-9YT_G9rcaQuqXfbHrVV8lpfDms3sE5VILkN1pI7FEDOhNrFVHM" />
+            </div>
+
+            <div class="mt-2">
+                <input class="form-control-sm" id="sendToToken" placeholder="Send to..." />
+                <input hidden class="form-control-sm" id="group" placeholder="Send to group..." />
+                <input class="form-control-sm" id="messages" placeholder="Enter messages..." />
+            </div>
+            <button id="btnSend" class="mt-2" type="button">Send</button>
+        </div>
+    </div>
+</div>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-messaging.js"></script>
+
+<!-- The firebase messaging custom services -->
+<script src="~/js/firebase-messaging/firebase-messaging-services.js" asp-append-version="true"></script>
+<script>
+    function pushNotify() {
+        const apiUrl = "https://localhost:44392/";
+        const sendMessageUrl = apiUrl + "api/fcm/send-message";
+        var sendMessageRequest = {
+            deviceToken: $("#sendToToken").val(),
+            data: {
+                title: "Message",
+                body: $("#messages").val(),
+            }
+        };
+
+        $.ajax({
+            type: "POST",
+            url: sendMessageUrl,
+            data: JSON.stringify(sendMessageRequest),
+            contentType: 'application/json; charset=utf-8',
+            dataType: 'json',
+            success: function (response) {
+                console.log(response);
+            },
+            error: function (errors) {
+                console.log(errors);
+            },
+
+        });
+
+    }
+
+    $(document).ready(function () {
+        $("#btnSend").click(function () {
+            pushNotify();
+        });
+    });
+
+</script>

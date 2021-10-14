@@ -1,0 +1,19 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/FCM.Web/bin/Debug/net5.0
+/FCM.Web/obj
+/FCMPushNotification.API/.vs
+/FCMPushNotification.API/FCMPushNotification.API/bin/Debug/net5.0
+/FCMPushNotification.API/FCMPushNotification.API/obj
+/FCMPushNotification.API/FCMPushNotification.Services/obj
+/FCMPushNotification.API/FCMPushNotification.Services/bin/Debug/net5.0
+/FCM.Web/.vs/FCM.Web
+/FCMPushNotification.API/FCMPushNotification.Entities/bin/Debug/net5.0
+/FCMPushNotification.API/FCMPushNotification.Entities/obj
+/FCMPushNotification.API/FCMPushNotification.Repository/bin/Debug/net5.0
+/FCMPushNotification.API/FCMPushNotification.Repository/obj
+/FCMPushNotification.API/FirebaseDataServices/obj
+/FCMPushNotification.API/FirebaseDataServices/bin/Debug/net5.0
+/Test-FCM-main/.idea
