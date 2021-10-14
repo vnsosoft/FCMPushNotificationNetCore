@@ -2,7 +2,7 @@
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 // Get config from firebase project managent (Firebase > Project settings > General > Your app > SDK setup and configuration session)
 var firebaseConfig = {
-    apiKey: "AIzaSyAcvqVpIZJUxhWJTBUl1uOhA9EKMtFYMI8",
+    apiKey: "YOUR_GG_API_KEY",
     authDomain: "fcmnetcoreapi.firebaseapp.com",
     projectId: "fcmnetcoreapi",
     storageBucket: "fcmnetcoreapi.appspot.com",
