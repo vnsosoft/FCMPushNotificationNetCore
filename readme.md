@@ -78,13 +78,13 @@ importScripts('https://www.gstatic.com/firebasejs/8.8.0/firebase-messaging.js');
 
 //config from firebase project managent (Firebase > Project settings > General > Your app > SDK setup and configuration session)
 var firebaseConfig = {
-    apiKey: "AIzaSyAcvqVpIZJUxhWJTBUl1uOhA9EKMtFYMI8",
-    authDomain: "fcmnetcoreapi.firebaseapp.com",
-    projectId: "fcmnetcoreapi",
-    storageBucket: "fcmnetcoreapi.appspot.com",
-    messagingSenderId: "1077523311985",
-    appId: "1:1077523311985:web:de9c433fc6ade37ec91ad0",
-    measurementId: "G-C2P1DCF948"
+    apiKey: "your-apiKey",
+    authDomain: "your-authDomain",
+    projectId: "your-projectId",
+    storageBucket: "your-storageBucket",
+    messagingSenderId: "your-messagingSenderId",
+    appId: "your-appId",
+    measurementId: "your-measurementId"
 };
 
 firebase.initializeApp(firebaseConfig);
@@ -96,13 +96,13 @@ const messaging = firebase.messaging();
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 // Get config from firebase project managent (Firebase > Project settings > General > Your app > SDK setup and configuration session)
 var firebaseConfig = {
-    apiKey: "AIzaSyAcvqVpIZJUxhWJTBUl1uOhA9EKMtFYMI8",
-    authDomain: "fcmnetcoreapi.firebaseapp.com",
-    projectId: "fcmnetcoreapi",
-    storageBucket: "fcmnetcoreapi.appspot.com",
-    messagingSenderId: "1077523311985",
-    appId: "1:1077523311985:web:de9c433fc6ade37ec91ad0",
-    measurementId: "G-C2P1DCF948"
+    apiKey: "your-apiKey",
+    authDomain: "your-authDomain",
+    projectId: "your-projectId",
+    storageBucket: "your-storageBucket",
+    messagingSenderId: "your-messagingSenderId",
+    appId: "your-appId",
+    measurementId: "your-measurementId"
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
